@@ -1,3 +1,5 @@
+// src/main.ts
+
 import * as core from "@actions/core";
 import * as github from "@actions/github";
 
@@ -12,7 +14,7 @@ async function run(): Promise<void> {
   try {
     if (!pullRequest) {
       core.setFailed("This action can only run on Pull Requests.");
-      return; // prevent further execution
+      return;
     }
 
     await octokit.rest.issues.addLabels({
@@ -26,4 +28,8 @@ async function run(): Promise<void> {
   }
 }
 
-run();
+export default run;
+
+if (require.main === module) {
+  run();
+}

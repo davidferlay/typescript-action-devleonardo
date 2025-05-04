@@ -29919,6 +29919,7 @@ function wrappy (fn, cb) {
 
 "use strict";
 
+// src/main.ts
 var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
     if (k2 === undefined) k2 = k;
     var desc = Object.getOwnPropertyDescriptor(m, k);
@@ -29956,7 +29957,6 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 const core = __importStar(__nccwpck_require__(7484));
 const github = __importStar(__nccwpck_require__(3228));
 async function run() {
-    var _a;
     console.log("XXXXXXXX");
     const token = core.getInput("github-token");
     const label = core.getInput("label");
@@ -29965,7 +29965,7 @@ async function run() {
     try {
         if (!pullRequest) {
             core.setFailed("This action can only run on Pull Requests.");
-            return; // prevent further execution
+            return;
         }
         await octokit.rest.issues.addLabels({
             owner: github.context.repo.owner,
@@ -29975,10 +29975,13 @@ async function run() {
         });
     }
     catch (error) {
-        core.setFailed((_a = error === null || error === void 0 ? void 0 : error.message) !== null && _a !== void 0 ? _a : "Unknown error");
+        core.setFailed(error?.message ?? "Unknown error");
     }
 }
-run();
+exports["default"] = run;
+if (require.main === require.cache[eval('__filename')]) {
+    run();
+}
 
 
 /***/ }),
