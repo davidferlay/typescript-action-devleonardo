@@ -5,5 +5,7 @@ on:
 
 jobs:
   hello:
-    using: "node22"
-    main: "dist/index.js"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ./
