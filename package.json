@@ -1,0 +1,22 @@
+{
+  "name": "typescript-action-devleonardo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidferlay/typescript-action-devleonardo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/davidferlay/typescript-action-devleonardo/issues"
+  },
+  "homepage": "https://github.com/davidferlay/typescript-action-devleonardo#readme"
+}

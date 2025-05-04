@@ -1,0 +1,9 @@
+name: "Hello"
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hello:
+    using: "node22"
+    main: "dist/index.js"
