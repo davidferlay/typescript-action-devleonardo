@@ -18,7 +18,8 @@
     "wrappy": "^1.0.2"
   },
   "scripts": {
-    "build": "ncc build src/index.ts -o dist"
+    "build": "ncc build src/index.ts -o dist",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -31,5 +32,10 @@
   "bugs": {
     "url": "https://github.com/davidferlay/typescript-action-devleonardo/issues"
   },
-  "homepage": "https://github.com/davidferlay/typescript-action-devleonardo#readme"
+  "homepage": "https://github.com/davidferlay/typescript-action-devleonardo#readme",
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2"
+  }
 }
