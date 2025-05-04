@@ -3,5 +3,5 @@ description: "Add a label when a new PR is open."
 author: "David Ferlay"
 
 runs:
-  using: "node22"
+  using: "node20"
   main: "dist/index.js"
