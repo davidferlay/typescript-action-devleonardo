@@ -2,6 +2,13 @@ name: "Label new pull request"
 description: "Add a label when a new PR is open."
 author: "David Ferlay"
 
+inputs:
+  github-token:
+    description: Your Github secret token to use API
+    required: true
+  label:
+    description: "The label to add automatically to PR"
+    required: true
 runs:
   using: "node20"
   main: "dist/index.js"

@@ -2,6 +2,9 @@ name: "Hello"
 
 on:
   workflow_dispatch:
+  push:
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   hello:
@@ -9,3 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: ./
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          label: "YAY"

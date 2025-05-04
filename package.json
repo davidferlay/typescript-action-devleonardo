@@ -3,9 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0",
+    "@vercel/ncc": "^0.38.3",
+    "before-after-hook": "^2.2.3",
+    "deprecation": "^2.3.1",
+    "once": "^1.4.0",
+    "tunnel": "^0.0.6",
+    "typescript": "^5.8.3",
+    "undici": "^5.29.0",
+    "undici-types": "^6.21.0",
+    "universal-user-agent": "^6.0.1",
+    "wrappy": "^1.0.2"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "ncc build src/index.ts -o dist"
   },
   "repository": {
     "type": "git",
